@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header{
+    width: 100%;
+    height: 75px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 5px #00000074;
+}
+.container{
+    width: 1200px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item{
+    width: max-content;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 7px;
+    padding: 15px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 150px 450px 75px;
+    grid-template-areas: 'img title rating' 'img desc desc' 'img price btn';
+}
+.item img{
+    grid-area: img;
+    width: 150px;
+    height: 150px;
+}
+.title_item{
+    grid-area: title;
+}
+.rating{
+    grid-area: rating;
+}
+.desc{
+    grid-area: desc;
+}
+.item a{
+    grid-area: btn;
+}
+.price{
+    grid-area: price;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.add label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add input[type=submit]{
+    width: max-content;
+    height: 100%;
+    padding: 10px 25px;
+    background: #008eaf;
+    border: none;
+    border-radius: 15px;
+    margin-top: 7px;
+}
+.card_item{
+    width: 900px;
+    display: grid;
+    grid-template-areas: 'img title price' 'img desc del';
+}
+.card_item img{
+    grid-area: img;
+    width: 150px;
+    height: 150px;
+}
+.card_title{
+    grid-area: title;
+}
+.card_price{
+    grid-area: price;
+}
+.card_desc{
+    grid-area: desc;
+}
+.card_item form{
+    grid-area: del;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-direction: column;
+}

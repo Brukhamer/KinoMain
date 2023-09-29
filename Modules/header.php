@@ -16,7 +16,7 @@ $filmsForSearch = select('select title from films');
 
 ?>
 <header>
-    <img src="" alt="logo">
+    <img src="../assets/img/КиноMain.png" alt="logo">
     <a href="<?= $home ?>">KinoMain</a>
     <form action="../php/search.php" method="get">
         <input name="name" type="text" list="search" placeholder="Поиск">

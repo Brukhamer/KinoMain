@@ -23,5 +23,6 @@ $film = select('select * from films where id =:id', ['id =>$id']);
     <span><?=$row['grade']?>*</span>
     <span><?=$row['price']?>P</span>
     <form action="../"></form>
+<?php endforeach; ?>
 </body>
 </html>

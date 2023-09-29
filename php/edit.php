@@ -8,19 +8,17 @@ if (!empty($_POST['editBtn'])){
 
     $confirm_password = password_verify($_POST['confirmPassword'], $old_password[0]['password']);
 
-    if ($confirm_password){
+    if ($confirm_password ==) {
         if ($_POST['newPassword'] == $_POST['confirmPassword']) {
             update(
                 'update users set password = :newPassword',
                 ['newPassword' => password_hash($_POST['newPassword'], PASSWORD_DEFAULT)]
             );
-            header('location: ../pages/profile.php?id='.$user_id);
+            header('location: ../pages/profile.php?id=' . $user_id);
         } else {
-                echo "Пароли не совпадают";
+            echo "Пароли не совпадают";
         }
-        } )
-    } else {
-            echo "Не правильный текущий пароль!";
+    } else {echo "Не правильный текущий пароль!";}
 }
 
 ?>

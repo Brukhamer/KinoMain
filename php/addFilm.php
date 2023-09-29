@@ -9,7 +9,7 @@ $cover = base64_encode($cover);
 require './db.php';
 
 insert(
-    'insert into products (title, description, grade, price, cover) 
+    'insert into films (title, description, grade, price, cover) 
     values (:title, :desc, :grade, :price, :cover)',
     [
         'title' => $title,
