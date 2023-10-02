@@ -6,9 +6,10 @@ if (!empty($_POST['editBtn'])){
     $old_password = select('select password from users where id = :id',
     [id =>$user_id]);
 
+
     $confirm_password = password_verify($_POST['confirmPassword'], $old_password[0]['password']);
 
-    if ($confirm_password ==) {
+    if ($confirm_password = true) {
         if ($_POST['newPassword'] == $_POST['confirmPassword']) {
             update(
                 'update users set password = :newPassword',
@@ -20,7 +21,6 @@ if (!empty($_POST['editBtn'])){
         }
     } else {echo "Не правильный текущий пароль!";}
 }
-
 ?>
 <form method="post">
     <label>

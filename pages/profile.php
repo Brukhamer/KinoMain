@@ -33,7 +33,8 @@ while ($i < count($cards)){
     <form action="../php/logout.php" method="post"><input type="submit" value="Выйти"></form>
     <form action="../php/edit.php" method="post"><input type="submit" value="Изменить данные"></form>
     <div class="card">
-        <?php foreach ($films as $film):  ?>
+        <?php
+        foreach ($films as $film):  ?>
             <div class="card_item">
                 <img src="data:image/png;base64,<?php echo $film[0]['cover'] ?>" alt="">
                 <h3 class="card_title"><?= $film[0]['title']  ?></h3>

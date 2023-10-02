@@ -16,14 +16,14 @@ $filmsForSearch = select('select title from films');
 
 ?>
 <header>
-    <img src="../assets/img/КиноMain.png" alt="logo">
-    <a href="<?= $home ?>">KinoMain</a>
+    <a href="<?= $home ?>"><img src="../assets/img/КиноMain.png" alt="logo"></a>
     <form action="../php/search.php" method="get">
         <input name="name" type="text" list="search" placeholder="Поиск">
         <input type="submit" value="Поиск">
     </form>
     <datalist id="search">
-        <?php foreach ($filmsForSearch as $title):    ?>
+        <?php
+        foreach ($filmsForSearch as $title):    ?>
             <option value="<?=$title['title'] ?>"></option>
 
         <?php endforeach; ?>

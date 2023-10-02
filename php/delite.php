@@ -1,6 +1,5 @@
 <?php
 session_start();
-//var_dump($_POST);
 require './db.php';
 $id = $_POST['id'];
 delete(

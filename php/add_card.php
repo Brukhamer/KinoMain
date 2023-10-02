@@ -7,7 +7,7 @@ require './db.php';
 
 
 insert(
-    'insert into card ( user_id, film_id) values (:user_id, :product_id)',
+    'insert into card ( user_id, film_id) values (:user_id, :film_id)',
     [
         'user_id' => $user_id,
         'product_id' => $film_id,
