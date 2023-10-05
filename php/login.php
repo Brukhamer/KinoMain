@@ -11,7 +11,7 @@ if (!empty($login)){
         if (!empty($user)){
             $_SESSION['user_id'] = $user [0]['id'];
             $_SESSION['is_admin'] = $user [0]['is_admin'] == '1';
-            header('location: ../');
+            header('location: ../pages/profile.php');
         }else{
             $_SESSION['error'] = 'Пользователь не найден!';
             header('location: ../pages/reg.php');

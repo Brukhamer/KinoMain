@@ -1,30 +1,27 @@
 <?php
 session_start();
-var_dump($_SESSION);
 ?>
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Авторизация</title>
+    <title>Главная страница</title>
 </head>
 <body>
-            <span style="color: red"><
-            </span>
-            <form action='../php/login.php' method="post">
-                <label>
-                    Введите логин: <br>
-                    <input type"text" name = "login">
-                </label>
-                <label>
-                    Введите пароль: <br>
-                    <input type"password" name = "password">
-                </label>
-                <input type="submit" value="Авторизоваться">
-            </form>
-            <a href="reg.php/login.php"
+<h2>Главная страница</h2>
+<form action="../php/login.php" method="post">
+   <p>
+        <label>Ваш логин:<br></label>
+        <input name="login" type="text" size="15" maxlength="15">
+    </p>
+    <p>
+        <label>Ваш пароль:<br></label>
+        <input name="password" type="password" size="15" maxlength="15">
+    </p>
+    <p>
+        <input type="submit" name="submit" value="Войти">
+        <br>
+        <a href="reg.php">Зарегистрироваться</a>
+    </p></form>
+<br>
+
 </body>
 </html>

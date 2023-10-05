@@ -19,6 +19,14 @@ session_start();
          <input type = "text" name = "fio"><br>
      </label>
      <label>
+         Введите email:
+         <input type = "text" name = "email"><br>
+     </label>
+     <label>
+         Введите номер телефона:
+         <input type = "text" name = "user_number"><br>
+     </label>
+     <label>
          Введите логин:
          <input type = "text" name = "login"><br>
      </label>

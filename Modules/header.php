@@ -6,8 +6,9 @@ if (!empty($id)){
 }else{
     if($_SERVER['REQUEST_URI'] != '/') $profile =  './login.php'; else $profile = './pages/login.php';
 }
+
 if ($_SESSION['is_admin'] == true){
-    if ($_SERVER['REQUEST_URI'] != '/') $add = './addFilm.php'; else $add  = './pages/addFilm.php';
+    if ($_SERVER['REQUEST_URI'] != '/') $add = './add_film.php'; else $add  = './pages/add_film.php';
 } else{
     $add = $home;
 }
@@ -16,7 +17,7 @@ $filmsForSearch = select('select title from films');
 
 ?>
 <header>
-    <a href="<?= $home ?>"><img src="../assets/img/КиноMain.png" alt="logo"></a>
+    <a href="<?= $home ?>"><img style="width: 75px; height: 75px;" src="../assets/styles/img/КиноMain.png" alt="logo"></a>
     <form action="../php/search.php" method="get">
         <input name="name" type="text" list="search" placeholder="Поиск">
         <input type="submit" value="Поиск">

@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.bg {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
 header{
     width: 100%;
     height: 75px;
@@ -14,15 +20,18 @@ header{
     box-shadow: 0 4px 5px #00000074;
 }
 .container{
-    width: 1200px;
-    margin: 25px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 800px;
+    margin: 25px 50px 50px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 15px;
+    background: ;
+
 }
 .item{
     width: max-content;
-    height: 150px;
+    height: 190px;
     margin: 0 auto;
     border-radius: 7px;
     padding: 15px;
@@ -33,8 +42,8 @@ header{
 }
 .item img{
     grid-area: img;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+
 }
 .title_item{
     grid-area: title;
@@ -100,3 +109,4 @@ header{
     gap: 25px;
     flex-direction: column;
 }
+
